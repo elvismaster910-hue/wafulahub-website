@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+    background: #131921;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff9900;
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 20px;
+    display: flex;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background: #febd69;
+    border: none;
+    cursor: pointer;
+}
+
+.cart {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+}
+
+/* PRODUCT GRID */
+.container {
+    padding: 20px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background: white;
+    border-radius: 5px;
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-name {
+    font-size: 14px;
+    height: 40px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.product-rating-stars {
+    display: inline-block;
+}
+
+.product-rating-stars img {
+    height: 14px;
+}
+
+.product-rating-count {
+    display: inline-block;
+    font-size: 14px;
+    color: #007185;
+    margin-left: 5px;
+}
+
+.product-price {
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.btn {
+    background: #ffd814;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #f7ca00;
+}
+
+@media(max-width: 1200px) {
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 768px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 500px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-quantity {
+    color: red;
+    border-radius: 10px;
+    height: 20px;
+    width: 20px;
+    font-weight: bold;
+}
